@@ -1,0 +1,485 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+header {
+    background-color: #1E1E1E;
+    padding: 30px;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.container ul li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-links {
+    display: flex;
+    gap: 50px;
+}
+
+/* From Uiverse.io by biswacpcode */
+.header-name {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-name::before {
+    margin-left: auto;
+}
+
+.header-name::after,
+.header-name::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+}
+
+.header-name:hover::after,
+.header-name:hover::before {
+    width: 100%;
+}
+
+.header-name a {
+    color: white;
+}
+
+/* From Uiverse.io by nikk7007 */
+.slice {
+    --c1: #202020;
+    --c2: #f44336;
+    --size-letter: 32px;
+    padding: 0.5em 1em;
+    font-size: var(--size-letter);
+
+    background-color: transparent;
+    border: calc(var(--size-letter) / 6) solid var(--c2);
+    border-radius: 0.2em;
+    cursor: pointer;
+
+    overflow: hidden;
+    position: relative;
+    transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+
+    &>.text {
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--c2);
+        position: relative;
+        z-index: 1;
+        transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+    }
+}
+
+.slice::after {
+    content: "";
+
+    width: 0;
+    height: calc(300% + 1em);
+
+    position: absolute;
+    translate: -50% -50%;
+    inset: 50%;
+    rotate: 30deg;
+
+    background-color: var(--c2);
+    transition: 1000ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.slice:hover {
+    &>.text {
+        color: var(--c1);
+    }
+
+    &::after {
+        width: calc(120% + 1em);
+    }
+}
+
+.slice:active {
+    scale: 0.98;
+    filter: brightness(0.9);
+}
+
+
+main {
+    background-color: #1E1E1E;
+    padding: 120px;
+}
+
+.hero-hi {
+    color: white;
+    font-size: 20px;
+}
+
+.hero-name {
+    color: #f44336;
+    font-size: 36px;
+    margin-left: 15px;
+}
+
+/* From Uiverse.io by kat_2522 */
+.loader {
+    max-width: fit-content;
+    color: rgb(242, 255, 240);
+    font-size: 50px;
+    font-family: Mine;
+    position: relative;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.loader span {
+    animation: cut 2s infinite;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.loader:hover {
+    color: #fcffdf;
+}
+
+.loader::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    background-color: #f44336;
+    top: 0px;
+    filter: blur(10px);
+    animation: scan 2s infinite;
+    left: 0;
+    z-index: 0;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.loader::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 5px;
+    border-radius: 4px;
+    background-color: #f44336;
+    top: 0px;
+    animation: scan 2s infinite;
+    left: 0;
+    z-index: 1;
+    filter: opacity(0.9);
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scan {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+        top: 54px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    75% {
+        top: 54px;
+    }
+}
+
+@keyframes cut {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    25% {
+        clip-path: inset(100% 0 0 0);
+    }
+
+    50% {
+        clip-path: inset(0 0 100% 0);
+    }
+
+    75% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.hero-lorem {
+    color: white;
+}
+
+.hero-words {
+    width: 500px;
+}
+
+
+
+
+
+/* From Uiverse.io by lukepadiachy */
+.my-loader {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 100px auto;
+}
+
+.rubiks-cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: my-rotateCube 5s infinite linear;
+}
+
+.my-loader .face {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.my-loader .face.front {
+    transform: translateZ(100px);
+}
+
+.my-loader .face.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.my-loader .face.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.my-loader .face.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.my-loader .face.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.my-loader .face.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.my-loader .cube {
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+    box-sizing: border-box;
+    border: 1px solid #000;
+}
+
+@keyframes my-rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.hero {
+    display: flex;
+}
+
+.hero-img {
+    display: flex;
+}
+#about1{
+    padding-top: 100px;
+}
+
+.about {
+    margin-left: 700px;
+}
+
+.about-me {
+    color: white;
+    font-size: 65px;
+}
+
+.about-lorem {
+    color: white;
+    font-size: 21px;
+}
+
+.about-img {
+    width: 300px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 65px;
+    margin-top: 100px;
+}
+
+.service-lorem {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 21px;
+}
+
+.service-card-one {
+    background-color: white;
+    width: 200px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.service-img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.service-card-two {
+    background-color: white;
+    width: 200px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.service-card-three {
+    background-color: white;
+    width: 200px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.service-card-four {
+    background-color: white;
+    width: 200px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.projects h1 {
+    color: white;
+    font-size: 65px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.projects p {
+    color: white;
+    font-size: 21px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.projects ul {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    font-size: 24px;
+    gap: 40px;
+    cursor: pointer;
+}
+
+.projects ul li {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.projects ul li:nth-child(3) {
+    color: white;
+    background-color: #FD6F00;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.inner {
+    --w: 100px;
+    --h: 150px;
+    --translateZ: calc((var(--w) + var(--h)) + 0px);
+    --rotateX: -15deg;
+    --perspective: 1000px;
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 25%;
+    left: calc(50% - (var(--w) / 2) - 2.5px);
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: perspective(var(--perspective));
+    animation: rotating 20s linear infinite;
+    /* */
+}
+
+@keyframes rotating {
+    from {
+        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
+    }
+
+    to {
+        transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn);
+    }
+}
