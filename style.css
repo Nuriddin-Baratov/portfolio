@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -14,13 +18,15 @@ body {
 }
 
 header {
-    background-color: #1E1E1E;
+    background-color: black;
     padding: 30px;
 }
 
 .container {
-    width: 1300px;
+    max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .container a {
@@ -40,6 +46,10 @@ header {
 .header-links {
     display: flex;
     gap: 50px;
+}
+
+.text {
+    color: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
 }
 
 /* From Uiverse.io by biswacpcode */
@@ -62,7 +72,7 @@ header {
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     display: block;
     transition: 0.5s;
 }
@@ -76,66 +86,9 @@ header {
     color: white;
 }
 
-/* From Uiverse.io by nikk7007 */
-.slice {
-    --c1: #202020;
-    --c2: #f44336;
-    --size-letter: 32px;
-    padding: 0.5em 1em;
-    font-size: var(--size-letter);
-
-    background-color: transparent;
-    border: calc(var(--size-letter) / 6) solid var(--c2);
-    border-radius: 0.2em;
-    cursor: pointer;
-
-    overflow: hidden;
-    position: relative;
-    transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
-
-    &>.text {
-        font-weight: 700;
-        font-size: 16px;
-        color: var(--c2);
-        position: relative;
-        z-index: 1;
-        transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
-    }
-}
-
-.slice::after {
-    content: "";
-
-    width: 0;
-    height: calc(300% + 1em);
-
-    position: absolute;
-    translate: -50% -50%;
-    inset: 50%;
-    rotate: 30deg;
-
-    background-color: var(--c2);
-    transition: 1000ms cubic-bezier(0.83, 0, 0.17, 1);
-}
-
-.slice:hover {
-    &>.text {
-        color: var(--c1);
-    }
-
-    &::after {
-        width: calc(120% + 1em);
-    }
-}
-
-.slice:active {
-    scale: 0.98;
-    filter: brightness(0.9);
-}
-
 
 main {
-    background-color: #1E1E1E;
+    background-color: black;
     padding: 120px;
 }
 
@@ -145,7 +98,7 @@ main {
 }
 
 .hero-name {
-    color: #f44336;
+    color: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     font-size: 36px;
     margin-left: 15px;
 }
@@ -176,7 +129,7 @@ main {
     width: 100%;
     height: 6px;
     border-radius: 4px;
-    background-color: #f44336;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     top: 0px;
     filter: blur(10px);
     animation: scan 2s infinite;
@@ -191,7 +144,7 @@ main {
     width: 100%;
     height: 5px;
     border-radius: 4px;
-    background-color: #f44336;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     top: 0px;
     animation: scan 2s infinite;
     left: 0;
@@ -199,6 +152,7 @@ main {
     filter: opacity(0.9);
     transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 
 @keyframes scan {
     0% {
@@ -244,75 +198,6 @@ main {
     width: 500px;
 }
 
-
-
-
-
-/* From Uiverse.io by lukepadiachy */
-.my-loader {
-    width: 200px;
-    height: 200px;
-    perspective: 1000px;
-    margin: 100px auto;
-}
-
-.rubiks-cube {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: my-rotateCube 5s infinite linear;
-}
-
-.my-loader .face {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-}
-
-.my-loader .face.front {
-    transform: translateZ(100px);
-}
-
-.my-loader .face.back {
-    transform: rotateY(180deg) translateZ(100px);
-}
-
-.my-loader .face.left {
-    transform: rotateY(-90deg) translateZ(100px);
-}
-
-.my-loader .face.right {
-    transform: rotateY(90deg) translateZ(100px);
-}
-
-.my-loader .face.top {
-    transform: rotateX(90deg) translateZ(100px);
-}
-
-.my-loader .face.bottom {
-    transform: rotateX(-90deg) translateZ(100px);
-}
-
-.my-loader .cube {
-    width: calc(100% / 3);
-    height: calc(100% / 3);
-    box-sizing: border-box;
-    border: 1px solid #000;
-}
-
-@keyframes my-rotateCube {
-    0% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateX(360deg) rotateY(360deg);
-    }
-}
-
 .hero {
     display: flex;
 }
@@ -320,87 +205,22 @@ main {
 .hero-img {
     display: flex;
 }
-#about1{
-    padding-top: 100px;
-}
 
-.about {
-    margin-left: 700px;
-}
-
-.about-me {
-    color: white;
-    font-size: 65px;
-}
-
-.about-lorem {
-    color: white;
-    font-size: 21px;
-}
-
-.about-img {
-    width: 300px;
-}
-
-.services {
+.aboutt {
     display: flex;
-    justify-content: center;
-    gap: 100px;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.service {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 65px;
-    margin-top: 100px;
-}
-
-.service-lorem {
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 21px;
-}
-
-.service-card-one {
-    background-color: white;
-    width: 200px;
-    height: 290px;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.service-img {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.service-card-two {
-    background-color: white;
-    width: 200px;
-    height: 290px;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.service-card-three {
-    background-color: white;
-    width: 200px;
-    height: 290px;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.service-card-four {
-    background-color: white;
-    width: 200px;
-    height: 290px;
-    border-radius: 10px;
-    padding: 20px;
+.my-img {
+    width: 400px;
+    border-radius: 1000px;
+    border: 10px solid #5B42F3;
 }
 
 .projects h1 {
+    text-align: center;
+    padding: 50px;
     color: white;
     font-size: 65px;
     font-family: "Roboto", sans-serif;
@@ -411,38 +231,14 @@ main {
         "wdth" 100;
 }
 
-.projects p {
-    color: white;
-    font-size: 21px;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+
+
+.item {
+    height: 400px;
 }
 
-.projects ul {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    list-style: none;
-    font-size: 24px;
-    gap: 40px;
-    cursor: pointer;
-}
-
-.projects ul li {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.projects ul li:nth-child(3) {
-    color: white;
-    background-color: #FD6F00;
+.owl-carousel {
+    padding: 100px 100px;
 }
 
 .wrapper {
@@ -482,4 +278,515 @@ main {
     to {
         transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn);
     }
+}
+
+/* From Uiverse.io by elijahgummer */
+.txt {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 1em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB 10%, #ffffff 20%);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 2s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(252, 0, 0, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+#my-family {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#my-group {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#projects {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.family {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    font-size: 65px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* From Uiverse.io by adamgiebl */
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+}
+
+.card__content {
+    background: rgb(5, 6, 45);
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+}
+
+.family-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.group {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    font-size: 65px;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.group-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+
+
+
+
+
+
+/* From Uiverse.io by pharmacist-sabot */
+/* --- Root Variables for the component --- */
+.glitch-form-wrapper {
+    --bg-color: #0d0d0d;
+    --primary-color: #00f2ea;
+    --secondary-color: #a855f7;
+    --text-color: #e5e5e5;
+    --font-family: "Fira Code", Consolas, "Courier New", Courier, monospace;
+    --glitch-anim-duration: 0.5s;
+}
+
+.glitch-form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    background-color: black;
+}
+
+/* --- Card Structure --- */
+.glitch-card {
+    background-color: var(--bg-color);
+    width: 100%;
+    border: 1px solid rgba(0, 242, 234, 0.2);
+    box-shadow:
+        0 0 20px rgba(0, 242, 234, 0.1),
+        inset 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5em 1em;
+    border-bottom: 1px solid rgba(0, 242, 234, 0.2);
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.card-title svg {
+    width: 1.2em;
+    height: 1.2em;
+    stroke: var(--primary-color);
+}
+
+.card-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-left: 5px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    position: absolute;
+    top: 0.75em;
+    left: 0;
+    font-size: 1rem;
+    color: var(--primary-color);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0, 242, 234, 0.3);
+    padding: 0.75em 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+}
+
+.form-group input:focus+.form-label,
+.form-group input:not(:placeholder-shown)+.form-label {
+    top: -1.2em;
+    font-size: 0.8rem;
+    opacity: 1;
+}
+
+.form-group input:focus+.form-label::before,
+.form-group input:focus+.form-label::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+.form-group input:focus+.form-label::before {
+    color: var(--secondary-color);
+    animation: glitch-anim var(--glitch-anim-duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.form-group input:focus+.form-label::after {
+    color: var(--primary-color);
+    animation: glitch-anim var(--glitch-anim-duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+}
+
+@keyframes glitch-anim {
+    0% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    20% {
+        transform: translate(-5px, 3px);
+        clip-path: inset(50% 0 20% 0);
+    }
+
+    40% {
+        transform: translate(3px, -2px);
+        clip-path: inset(20% 0 60% 0);
+    }
+
+    60% {
+        transform: translate(-4px, 2px);
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    80% {
+        transform: translate(4px, -3px);
+        clip-path: inset(30% 0 45% 0);
+    }
+
+    100% {
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* --- Button Styling --- */
+.submit-btn {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px var(--primary-color);
+    outline: none;
+}
+
+.submit-btn:active {
+    transform: scale(0.97);
+}
+
+/* --- Glitch Effect for Button --- */
+.submit-btn .btn-text {
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover .btn-text {
+    opacity: 0;
+}
+
+.submit-btn::before,
+.submit-btn::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: var(--primary-color);
+    transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover::before,
+.submit-btn:focus::before {
+    opacity: 1;
+    color: var(--secondary-color);
+    animation: glitch-anim var(--glitch-anim-duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.submit-btn:hover::after,
+.submit-btn:focus::after {
+    opacity: 1;
+    color: var(--bg-color);
+    animation: glitch-anim var(--glitch-anim-duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .form-group input:focus+.form-label::before,
+    .form-group input:focus+.form-label::after,
+    .submit-btn:hover::before,
+    .submit-btn:focus::before,
+    .submit-btn:hover::after,
+    .submit-btn:focus::after {
+        animation: none;
+        opacity: 0;
+    }
+
+    .submit-btn:hover .btn-text {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* From Uiverse.io by elisapi */
+.zzz {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+/* for all social containers*/
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(65, 29, 131);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    border-radius: 30px;
+}
+
+/* instagram*/
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+}
+
+/* twitter*/
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+}
+
+/* linkdin*/
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+    background-color: #128c7e;
+    transition-duration: 0.3s;
+    transform: scale(1.2);
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.social-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-next {
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB) !important;
+    width: 40px !important;
+    height: 40px !important;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.owl-prev {
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB) !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.owl-prev::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/arrow-left.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.owl-prev span {
+    display: none;
+}
+
+.owl-next::after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+.owl-next span {
+    display: none;
+}
+
+.owl-dots {
+    display: none;
+}
+
+.my-familyy{
+    color: white;
+    padding-top: 190px;
+    padding-left: 35px;
 }
