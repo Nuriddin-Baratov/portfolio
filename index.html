@@ -13,18 +13,19 @@
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="navbar">
+            <div class="navbar" data-aos="fade-down">
                 <h1 class="header-name"><a href="">NuriddinDev</a></h1>
                 <ul class="header-links">
                     <li class="slice">
@@ -52,17 +53,18 @@
         <section id="hero">
             <div class="container">
                 <div class="aboutt">
-                    <div class="hero-words">
+                    <div class="hero-words" data-aos="fade-right">
                         <p class="hero-hi">Hi I am</p>
                         <h3><a href="" class="hero-name">Nuriddin Baratov</a></h3>
                         <p class="loader"><span>Frontend Developer</span></p>
                         <br>
-                        <p class="hero-lorem"class="my-familyy">Mani ismim Nuriddin, man 15 yoshdaman.Man 166 chi maktabda, 8 "E" sinfda
+                        <p class="hero-lorem" class="my-familyy">Mani ismim Nuriddin, man 15 yoshdaman.Man 166 chi
+                            maktabda, 8 "E" sinfda
                             oqiyman.Man PDP Juniorga qatnashaman chunki manga dasturlash yoqadi.Yana manga koproq futbol
                             oynash yoqadi
                         </p>
                     </div>
-                    <div class="hero-img">
+                    <div class="hero-img" data-aos="fade-left">
                         <img src="./images/my-image.png" alt="" class="my-img">
                     </div>
                 </div>
@@ -74,29 +76,44 @@
                     <h1 class="txt">My Family</h1>
                 </div>
                 <div class="family-cards">
-                    <div class="card">
-                        <div class="card__content">
-                            <h3 class="my-familyy">Mani adam</h3>
+                    <div data-aos="fade-down">
+                        <div class="card">
+                            <div class="card__content">
+                                <img src="./images/adam.png" alt="" class="adam">
+                                <h3 class="my-familyy">Mani adam</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <h3 class="my-familyy">Mani oyim</h3>
+                    <div data-aos="fade-up">
+                        <div class="card">
+                            <div class="card__content">
+                                <img src="./images/oyim.png" alt="" class="oyim">
+                                <h3 class="my-familyy">Mani oyim</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <h3 class="my-familyy">Mani ukam</h3>
+                    <div data-aos="fade-down">
+                        <div class="card">
+                            <div class="card__content">
+                                <img src="./images/ukam1.png" alt="" class="ukam1">
+                                <h3 class="my-familyy">Mani ukam</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <h3 class="my-familyy">Mani ukam</h3>
+                    <div data-aos="fade-up">
+                        <div class="card">
+                            <div class="card__content">
+                                <img src="./images/ukam2.png" alt="" class="ukam2">
+                                <h3 class="my-familyy">Mani ukam</h3>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <h3 class="my-familyy">Man</h3>
+                    <div data-aos="fade-down">
+                        <div class="card">
+                            <div class="card__content">
+                                <img src="./images/my-image.png" alt="" class="man">
+                                <h3 class="my-familyy">Man</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,44 +125,52 @@
                     <h1 class="txt">My Group</h1>
                 </div>
                 <div class="group-cards">
-                    <div class="card">
-                        <div class="card__content">
+                    <div data-aos="fade-down">
+                        <div class="card-group">
+                            <div class="card__content">
+                                <img src="./images/Axror.png" alt="" class="group-img">
+                                <p>Bu mening guruhdoshim uni ismi Axror</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
+                    <div data-aos="fade-down">
+                        <div class="card-group">
+                            <div class="card__content">
+                                <img src="./images/G'ayrat.png" alt="" class="group-img">
+                                <p>Bu mening guruhdoshim uni ismi G'ayrat</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
+                    <div data-aos="fade-down">
+                        <div class="card-group">
+                            <div class="card__content">
+                                <img src="./images/Ozodbek.png" alt="" class="group-img">
+                                <p>Bu mening guruhdoshim uni ismi Ozodbek</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
+                    <div data-aos="fade-up">
+                        <div class="card-group">
+                            <div class="card__content">
+                                <img src="./images/Muhammadayub.png" alt="" class="group-img">
+                                <p>Bu mening guruhdoshim uni ismi Muhammadayub</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
+                    <div data-aos="fade-up">
+                        <div class="card-group">
+                            <div class="card__content">
+                                <img src="./images/Ibrohim.png" alt="" class="group-img">
+                                <p>Bu mening guruhdoshim uni ismi Ibrohim</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__content">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
+                    <div data-aos="fade-up">
+                        <div class="card-group">
+                            <div class="card__content">
+                                <img src="./images/Abdulloh.png" alt="" class="group-img">
+                                <p>Bu mening guruhdoshim uni ismi Abdulloh</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -293,7 +318,19 @@
                 }
             })
         </script>
+
+
+
     </main>
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init(
+        {
+            duration: 3000,
+            delay: 2,
+        }
+    );
+</script>
 
 </html>

@@ -340,8 +340,8 @@ main {
 
 /* From Uiverse.io by adamgiebl */
 .card {
-    width: 190px;
-    height: 254px;
+    width: 200px;
+    height: 270px;
     border-radius: 20px;
     padding: 5px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -375,7 +375,7 @@ main {
 
 .group-cards {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
@@ -785,8 +785,66 @@ main {
     display: none;
 }
 
-.my-familyy{
+.my-familyy {
     color: white;
-    padding-top: 190px;
+    padding-top: 5px;
     padding-left: 35px;
+}
+
+.group-img {
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-top: 20px;
+    width: 250px;
+    height: 200px;
+}
+
+.card__content p {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+}
+
+.card-group {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+}
+
+.adam {
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.oyim {
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.ukam1 {
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.ukam2 {
+    margin-left: 35px;
+    margin-top: 10px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.man {
+    margin-left: 25px;
+    margin-top: 10px;
+    width: 70%;
+    border-radius: 10px;
 }
