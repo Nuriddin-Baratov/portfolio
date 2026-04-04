@@ -20,6 +20,9 @@ body {
 header {
     background-color: black;
     padding: 30px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
 }
 
 .container {
